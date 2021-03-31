@@ -1,0 +1,36 @@
+1. Assess your knowledge level on the following languages (1 = none; 5 = expert):
+    Vanilla JS - 3
+    jQuery - 3
+    HTML/HTML5 - 4
+    CSS/CSS3 - 4
+    Ajax - 2
+    AngularJS - 1
+    Bootstrap - 3
+
+2. What is the width of a container with 100px of width and 5px of padding?
+The container width is 100px since padding creates extra space within the element.
+
+3. How to apply a click event to all paragraphs except for the last?
+var getAllParagraphsElements = document.querySelectorAll("p");
+
+var i;
+for (i = 0; i < getAllParagraphsElements.length -1; i++) {
+    getAllParagraphsElements[i].addEventListener("click", myFunction);
+}
+
+function myFunction() {
+    alert("Click event applied to all P elements, except for the last.");
+}
+
+4. Why does the alert show "Jack" first and then undefined?
+function identity() {
+    var name = 'Jack';
+    alert(name);
+    return
+    name
+};
+
+var who = identity();
+alert(who)
+
+Because the function has a syntax error. The "name" variable should come right after "return" assignment, on the same line.
